@@ -66,5 +66,5 @@ Evaluation results:
 ```
 
 ## Project Contributors
-- [Abhilasha Singh](https://github.com/AbhilashaSingh)
+- [Abhilasha Singh](https://github.com/abhilasha-utexas)
 - [Swarup Ghosh](https://github.com/swghosh)
