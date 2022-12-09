@@ -1,4 +1,4 @@
-# nlp-fp
+# CS388 Final Project: Analyzing and Mitigating the Effect of Different Pre-trained Transformer Models for NLP Question Answering
 
 This code was adapted from https://github.com/gregdurrett/fp-dataset-artifacts. More details about getting started with this code could be found in the [original readme](./old_README.md).
 
@@ -65,6 +65,6 @@ Evaluation results:
 {'eval_exact_match': 81.66508988,	'eval_f1': 88.74311131}
 ```
 
-## Contributors
-- Abhilasha Singh (abhilashasingh@utexas.edu) 
-- Swarup Ghosh (swarup.ghosh@utexas.edu)
+## Project Contributors
+- [Abhilasha Singh](https://github.com/AbhilashaSingh)
+- [Swarup Ghosh](https://github.com/swghosh)
