@@ -1,4 +1,4 @@
-# CS388 Final Project: Analyzing and Mitigating the Effect of Different Pre-trained Transformer Models for NLP Question Answering
+# Analyzing the Effect of Different Pre-trained Transformer Models and Optimizers for NLP Question Answering
 
 This code was adapted from https://github.com/gregdurrett/fp-dataset-artifacts. More details about getting started with this code could be found in the [original readme](./old_README.md).
 
@@ -64,7 +64,3 @@ $ python3 run.py --do_eval --task qa --dataset squad --model /tmp/model --output
 Evaluation results:
 {'eval_exact_match': 81.66508988,	'eval_f1': 88.74311131}
 ```
-
-## Project Contributors
-- [Abhilasha Singh](https://github.com/abhilasha-utexas)
-- [Swarup Ghosh](https://github.com/swghosh)
