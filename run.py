@@ -6,7 +6,9 @@ from helpers import prepare_dataset_nli, prepare_train_dataset_qa, \
 import os
 import json
 
-NUM_PREPROCESSING_WORKERS = 2
+import pdb
+
+NUM_PREPROCESSING_WORKERS = 16
 
 
 def main():
@@ -48,6 +50,17 @@ def main():
                       help='Limit the number of examples to evaluate on.')
 
     training_args, args = argp.parse_args_into_dataclasses()
+    training_args.logging_strategy = 'epoch'
+    training_args.evaluation_strategy = 'no'
+    training_args.save_strategy = 'epoch'
+    # training_args.tpu_num_cores = 1
+    training_args.disable_tqdm = False
+    training_args.debug = 'tpu_metrics_debug'
+    training_args.auto_find_batch_size = False
+    training_args.per_device_train_batch_size = 32
+
+    # training_args.save_steps = training_args.logging_steps =  500
+    # training_args.eval_steps = 2000
 
     # Dataset selection
     if args.dataset.endswith('.json') or args.dataset.endswith('.jsonl'):
@@ -199,6 +212,9 @@ def main():
                     f.write(json.dumps(example_with_prediction))
                     f.write('\n')
 
+def _mp_fn(index):
+    # For xla_spawn (TPUs)
+    main()
 
 if __name__ == "__main__":
     main()
